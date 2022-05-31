@@ -2,7 +2,7 @@ import numpy as np
 import os
 import librosa
 from sklearn.mixture import GaussianMixture
-traindatapath = '/home/chris/Desktop/Voice Dataset/train/'
+traindatapath = '/Voice Dataset/train/'
 n_mfcc=39
 n_components=35
 
@@ -17,7 +17,7 @@ for file in os.listdir(traindatapath):
         gaussian = gaussian.fit(mfcc_t)
         trained_gaussian.append(gaussian)
         trained_labelname.append(file[1])
-testdatapath = '/home/chris/Desktop/Voice Dataset/test/'
+testdatapath = '/Voice Dataset/test/'
 test_labelname = []
 actual_labelname = []
 predicted_labelnames = []
